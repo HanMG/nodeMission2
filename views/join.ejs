@@ -11,7 +11,7 @@
     <div id="body">
         <div class="bg-white text-center"><h1>JOIN</h1></div>
         <div class="text-center container p-5">
-            <form action="/join" method="post">
+            <form action="#" method="post">
                  <div class="form-group">
                    <label for="email">Email address:</label>
                    <input type="email" class="form-control" name="email" placeholder="Enter email" id="email">
@@ -38,6 +38,7 @@
     document.querySelector('.ajaxJoin').addEventListener('click',function(){
         var email = document.getElementsByName('email')[0].value;
         var password = document.getElementsByName('password')[0].value;
+        var name = document.getElementsByName('name')[0].value;
         sendAjax('http://localhost:3000/join', {'email':email, 'name': name, 'password':password} );
     })
 

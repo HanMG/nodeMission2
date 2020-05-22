@@ -29,6 +29,7 @@ router.post('/',function(req,res){
             res.json(responseData);
         } else{
             console.log('no matching!!')
+            console.log(name);
             var sql = {email: email, name: name, pw: password}
             var query = connection.query('insert into tbl_user set ?',sql,function(err,rows){
                 responseData.result = "ok";
